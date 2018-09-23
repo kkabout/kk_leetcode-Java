@@ -14,7 +14,7 @@ package com.medium;
  * 输入: "cbbd"
  * 输出: "bb"
  */
-public class Five {
+public class L5 {
     public String longestPalindrome(String s) {
         int n = s.length();
         int start =0 ,end = 0;
@@ -45,7 +45,7 @@ public class Five {
     }
     public static void main(String[] args)
     {
-        Five f = new Five();
+        L5 f = new L5();
         System.out.println(f.longestPalindrome("detartrated"));
     }
 }

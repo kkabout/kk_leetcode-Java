@@ -12,7 +12,7 @@ package com.easy;
  *
  * 如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的分治法求解。
  */
-public class fiftythree {
+public class L53 {
 //    public int maxSubArray(int[] nums) {
 //        int maxsum=Integer.MIN_VALUE;
 //        for(int i = 0  ; i<nums.length;i++){
@@ -41,7 +41,7 @@ public class fiftythree {
     }
     public static void main(String[] args)
     {
-        fiftythree f = new fiftythree();
+        L53 f = new L53();
         int a[] = {-2,1};
         System.out.println(f.maxSubArray(a));
     }

@@ -24,7 +24,7 @@ import java.util.Set;
  * 解释: 无重复字符的最长子串是 "wke"，其长度为 3。
  *      请注意，答案必须是一个子串，"pwke" 是一个子序列 而不是子串。
  */
-public class Three {
+public class L3 {
     public int lengthOfLongestSubstring(String s)
     {
         int n =s.length();

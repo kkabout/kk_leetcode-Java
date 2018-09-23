@@ -13,7 +13,7 @@ package com.medium;
  *     ListNode(int x) { val = x; }
  * }
  */
-public class Two {
+public class L2 {
 
       public class ListNode {
       int val;

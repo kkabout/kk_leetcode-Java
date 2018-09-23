@@ -19,7 +19,7 @@ import java.util.List;
  *   [-1, -1, 2]
  * ]
  */
-public class fifteen {
+public class L15 {
     //解决思路 先排序 固定一个数a[i] 在剩下的数中寻找两数相加的和为a[i]的相反数
     //解决重复问题 当a[i]=a[i]+1 再往后搜索回搜索出相同的结果 直接下一次循环
     //k j的去重思路和上面一样
