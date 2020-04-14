@@ -53,7 +53,7 @@ public class P61RotateList {
      */
     class Solution {
         public ListNode rotateRight(ListNode head, int k) {
-
+            return null;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
