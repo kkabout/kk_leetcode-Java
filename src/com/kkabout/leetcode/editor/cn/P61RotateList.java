@@ -52,8 +52,38 @@ public class P61RotateList {
      * }
      */
     class Solution {
+        //把末尾x个节点调换到开头 注意边界条件判断
         public ListNode rotateRight(ListNode head, int k) {
-            return null;
+            if (head == null || k == 0 || head.next == null) {
+                return head;
+            }
+            int len = 0;
+            ListNode preHead = new ListNode(0);
+            preHead.next = head;
+            while (head != null) {
+                head = head.next;
+                len++;
+            }
+            int x = k % len;
+
+            if (x == 0) {
+                return preHead.next;
+            }
+
+            //双指针定位x到末尾的节点
+            ListNode preStart = preHead , end = preHead;
+            for (int i = 0; i < len; i++) {
+                end = end.next;
+                if (i >= x) {
+                    preStart = preStart.next;
+                }
+            }
+
+            //将x到末尾的节点拼接到头部
+            ListNode newHead = preStart.next;
+            preStart.next = null;
+            end.next = preHead.next;
+            return newHead;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)

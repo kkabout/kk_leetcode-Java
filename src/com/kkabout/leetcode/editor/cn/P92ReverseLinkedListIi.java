@@ -41,9 +41,40 @@ public class P92ReverseLinkedListIi {
          */
         class Solution {
             public ListNode reverseBetween(ListNode head, int m, int n) {
-                ListNode preHead = head;
-                
+                ListNode preHead = new ListNode(0);
+                preHead.next = head;
+
+                ListNode preStart = preHead, nextEnd = preHead;
+                //移动指针
+                for (int i = 0 ; i <= n; i++) {
+                    if (i < m - 1) {
+                        preStart = preStart.next;
+                    }
+                    if (i < n + 1) {
+                        nextEnd = nextEnd.next;
+                    }
+                }
+
+                //记录起始位置 翻转后起始位置变为末尾 用于链接后续节点
+                ListNode start = preStart.next;
+
+                //翻转待翻转区域
+                ListNode pre = preStart.next;
+                ListNode cur = pre.next;
+                while (cur != nextEnd) {
+                    ListNode next =  cur.next;
+                    cur.next = pre;
+                    pre = cur;
+                    cur = next;
+                }
+
+                //链接前后节点
+                preStart.next = pre;
+                start.next = nextEnd;
+
+                return preHead.next;
             }
+
         }
 //leetcode submit region end(Prohibit modification and deletion)
 
